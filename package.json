@@ -16,6 +16,9 @@
     "coverageReporters": [
       "lcov",
       "text"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js"
     ]
   }
 }
