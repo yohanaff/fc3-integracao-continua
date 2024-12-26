@@ -1,0 +1,17 @@
+name: ci-sonarcloud
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  run-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # javascript
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '23.3.0'
+      - run: npm test
+
