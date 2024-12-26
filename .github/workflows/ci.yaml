@@ -12,10 +12,14 @@ jobs:
       # javascript
       - uses: actions/setup-node@v1
         with:
-          node-version: '23.3.0'
+          node-version: "23.3.0"
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
-        run: npm test
+      - name: Run tests with coverage
+        run: npm test -- --coverage
 
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v4
+        with:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
