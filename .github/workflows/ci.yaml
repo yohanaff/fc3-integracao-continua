@@ -18,6 +18,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          
-      - name: Verify LCOV File
-        run: ls -la coverage
+
+      - name: Install Dependencies
+        run: npm install
+        
+      - name: Run Tests with Coverage
+        run: npm test -- --coverage
+
