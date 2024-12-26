@@ -14,10 +14,15 @@ function divide(a, b) {
     return a / b;
 }
 
+function exponentiate(a, b) {
+    return a ** b;
+}
+
 module.exports = {
     add,
     substract,
     multiply,
-    divide
+    divide,
+    exponentiate
 };
 
