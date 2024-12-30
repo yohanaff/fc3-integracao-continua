@@ -15,3 +15,7 @@ test('multiply', () => {
 test('divide', () => {
     expect(divide(6, 3)).toBe(2);
 });
+
+test('factorial', () => {
+    expect(factorial(5)).toBe(120);
+});
